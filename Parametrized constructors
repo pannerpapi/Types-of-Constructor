@@ -1,0 +1,40 @@
+
+#include <iostream>
+using namespace std;
+
+class construct{
+    int d, m, y;
+    public:
+        construct(){
+            cout<<"Day: ";
+            cin>>d;
+            cout<<"Month: ";
+            cin>>m;
+            cout<<"Year: ";
+            cin>>y;
+        }
+        construct(int a, int b, int c){
+            d = a;
+            m = b;
+            y = c;
+        }
+        void display(){
+            cout<<"date: "<<d<<"/"<<m<<"/"<<y<<endl;
+        }
+};
+
+int main() {
+    construct c1(28, 8, 2025);
+    c1.display();
+
+    construct c2;
+    c2.display();
+    return 0;
+}
+
+//output
+date: 28/8/2025
+Day: 22
+Month: 8
+Year: 25
+date: 22/8/25
