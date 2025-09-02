@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class student{
+    int age;
+    string name;
+    public:
+    student(string n, int a){
+    name = n;
+    age = a;
+    }
+    student(const student &s){
+        name=s.name;
+        age=s.age;
+        cout<<"Copy constructor called!!"<<endl;
+    }
+    void display(){
+        cout<<"name:"<<name<<"\nage:"<<age<<endl;
+    }
+};
+
+int main() {
+    student s1("bhu",19);
+    student s2=s1;
+    
+    cout<<"original object";
+    s1.display();
+    
+    cout<<"copied object ";
+    s2.display();
+    return 0;
+}
+
+//OUTPUT
+Copy constructor called!!
+original objectname:bhu
+age:19
+copied object name:bhu
+age:19
